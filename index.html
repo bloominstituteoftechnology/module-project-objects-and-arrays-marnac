@@ -35,8 +35,14 @@
     // 🧠 The function buildUser takes three arguments and uses them to build an object and return it.
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
+    
+    
     function buildUser(firstName, lastName, age) {
-
+      let builder= {}
+      builder.firstName= firstName
+      builder.lastName= lastName
+      builder.age= age
+      return(builder)
     }
 
     // 👉 CHALLENGE 3
@@ -47,8 +53,13 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
-
+    function deletePrice(product) {
+      if (product.price === undefined){
+        product.priceless = true
+      }else{
+      delete product.price
+      }
+      return product
     }
 
     // 👉 CHALLENGE 4
