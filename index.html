@@ -82,7 +82,14 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
+    function firstOrLast(arr, boo) {
+      
+      if(boo === true){
+        return arr[0]
+      }else{
+        arrReturn=arr[arr.length -1]
+        return arrReturn
+      }
 
     }
 
