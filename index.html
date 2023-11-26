@@ -157,8 +157,15 @@
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps() {
-
+    function getProps(prop) {
+      let safeProps= []
+    
+      for( let i in prop){
+        if((i !== "age") && (i !== "married")){
+          safeProps.push(i)
+        }
+      }
+      return safeProps
     }
 
     // 🧪 TESTS, do not work below this line
